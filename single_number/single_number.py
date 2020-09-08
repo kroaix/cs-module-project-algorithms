@@ -5,7 +5,13 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
-    pass
+    for i in range(len(arr)):
+        double = False
+        for j in range(len(arr)):
+            if i != j and arr[i] == arr[j]:
+                double = True
+        if not double:
+            return arr[i]
 
 
 if __name__ == '__main__':
