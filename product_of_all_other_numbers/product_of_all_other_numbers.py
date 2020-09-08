@@ -5,7 +5,17 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    new_array = []
+    for i in range(len(arr)):
+        #temp var assigned to 1 because 1 * num = num
+        var = 1
+        #loop through the array and multiply the num at each index by nums in every other index
+        for j in range(len(arr)):
+            #we don't want index we are currently on
+            if j != i:
+                var *= arr[j]
+        new_array.append(var)
+    return new_array
 
 
 if __name__ == '__main__':
